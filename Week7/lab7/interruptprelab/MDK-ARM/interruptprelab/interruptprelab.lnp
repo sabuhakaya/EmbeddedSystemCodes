@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"interruptprelab\startup_stm32f103x6.o"
+"interruptprelab\main.o"
+"interruptprelab\stm32f1xx_it.o"
+"interruptprelab\stm32f1xx_hal_msp.o"
+"interruptprelab\stm32f1xx_hal_gpio_ex.o"
+"interruptprelab\stm32f1xx_hal_tim.o"
+"interruptprelab\stm32f1xx_hal_tim_ex.o"
+"interruptprelab\stm32f1xx_hal_uart.o"
+"interruptprelab\stm32f1xx_hal.o"
+"interruptprelab\stm32f1xx_hal_rcc.o"
+"interruptprelab\stm32f1xx_hal_rcc_ex.o"
+"interruptprelab\stm32f1xx_hal_gpio.o"
+"interruptprelab\stm32f1xx_hal_dma.o"
+"interruptprelab\stm32f1xx_hal_cortex.o"
+"interruptprelab\stm32f1xx_hal_pwr.o"
+"interruptprelab\stm32f1xx_hal_flash.o"
+"interruptprelab\stm32f1xx_hal_flash_ex.o"
+"interruptprelab\stm32f1xx_hal_exti.o"
+"interruptprelab\system_stm32f1xx.o"
+--strict --scatter "interruptprelab\interruptprelab.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "interruptprelab.map" -o interruptprelab\interruptprelab.axf

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cprj schemaVersion="1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
+
+  <created timestamp="2022-03-25T15:25:46" tool="uVision V5.36.0.0"/>
+
+  <info>
+    <name>lab4</name>
+    <description/>
+  </info>
+
+  <packages>
+    <package name="CMSIS" vendor="ARM"/>
+    <package name="STM32F1xx_DFP" vendor="Keil"/>
+  </packages>
+
+  <compilers>
+    <compiler name="AC5" version="5.0.0:5.99.99"/>
+  </compilers>
+
+  <target Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="NO_FPU" Dmve="NO_MVE" Dname="STM32F107VC" Dsecure="Non-secure" Dtz="TZ" Dvendor="STMicroelectronics:13">
+    <output intdir="lab4/" name="lab4" outdir="lab4/" type="exe"/>
+    <ldflags add="--strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers --entry=Reset_Handler" compiler="AC5" file="./lab4.lab4.sct"/>
+    <cflags add="--apcs=interwork --c99 --split_sections -D__EVAL -O0 -g" compiler="AC5"/>
+    <asflags add="--apcs=interwork --pd &quot;__EVAL SETA 1&quot; --xref -g" compiler="AC5"/>
+    <includes>../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Inc</includes>
+    <defines>STM32F107xC;USE_HAL_DRIVER</defines>
+  </target>
+
+  <components>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM"/>
+  </components>
+
+  <files>
+    <group name="Application/MDK-ARM">
+      <file category="sourceAsm" name="startup_stm32f107xc.s"/>
+    </group>
+    <group name="Application/User">
+      <file category="sourceC" name="../Src/main.c"/>
+      <file category="sourceC" name="../Src/stm32f1xx_it.c"/>
+      <file category="sourceC" name="../Src/stm32f1xx_hal_msp.c"/>
+    </group>
+    <group name="Drivers/STM32F1xx_HAL_Driver">
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c"/>
+      <file category="sourceC" name="../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c"/>
+    </group>
+    <group name="Drivers/CMSIS">
+      <file category="sourceC" name="../Src/system_stm32f1xx.c"/>
+    </group>
+  </files>
+
+</cprj>

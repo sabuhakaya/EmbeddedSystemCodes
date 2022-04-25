@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"buzzer_play_song\startup_stm32f107xc.o"
+"buzzer_play_song\main.o"
+"buzzer_play_song\stm32f1xx_it.o"
+"buzzer_play_song\stm32f1xx_hal_msp.o"
+"buzzer_play_song\system_stm32f1xx.o"
+"buzzer_play_song\stm32f1xx_hal_gpio_ex.o"
+"buzzer_play_song\stm32f1xx_hal_adc.o"
+"buzzer_play_song\stm32f1xx_hal_adc_ex.o"
+"buzzer_play_song\stm32f1xx_hal.o"
+"buzzer_play_song\stm32f1xx_hal_rcc.o"
+"buzzer_play_song\stm32f1xx_hal_rcc_ex.o"
+"buzzer_play_song\stm32f1xx_hal_gpio.o"
+"buzzer_play_song\stm32f1xx_hal_dma.o"
+"buzzer_play_song\stm32f1xx_hal_cortex.o"
+"buzzer_play_song\stm32f1xx_hal_pwr.o"
+"buzzer_play_song\stm32f1xx_hal_flash.o"
+"buzzer_play_song\stm32f1xx_hal_flash_ex.o"
+"buzzer_play_song\stm32f1xx_hal_tim.o"
+"buzzer_play_song\stm32f1xx_hal_tim_ex.o"
+"buzzer_play_song\stm32f1xx_hal_uart.o"
+--library_type=microlib --strict --scatter "BUZZER_Play_Song\BUZZER_Play_Song.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BUZZER_Play_Song.map" -o BUZZER_Play_Song\BUZZER_Play_Song.axf

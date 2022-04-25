@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"prelab8part3\startup_stm32f103x6.o"
+"prelab8part3\main.o"
+"prelab8part3\stm32f1xx_it.o"
+"prelab8part3\stm32f1xx_hal_msp.o"
+"prelab8part3\stm32f1xx_hal_gpio_ex.o"
+"prelab8part3\stm32f1xx_hal_tim.o"
+"prelab8part3\stm32f1xx_hal_tim_ex.o"
+"prelab8part3\stm32f1xx_hal.o"
+"prelab8part3\stm32f1xx_hal_rcc.o"
+"prelab8part3\stm32f1xx_hal_rcc_ex.o"
+"prelab8part3\stm32f1xx_hal_gpio.o"
+"prelab8part3\stm32f1xx_hal_dma.o"
+"prelab8part3\stm32f1xx_hal_cortex.o"
+"prelab8part3\stm32f1xx_hal_pwr.o"
+"prelab8part3\stm32f1xx_hal_flash.o"
+"prelab8part3\stm32f1xx_hal_flash_ex.o"
+"prelab8part3\stm32f1xx_hal_exti.o"
+"prelab8part3\system_stm32f1xx.o"
+--strict --scatter "prelab8part3\prelab8part3.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "prelab8part3.map" -o prelab8part3\prelab8part3.axf
